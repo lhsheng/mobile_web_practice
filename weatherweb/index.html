@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="initial-scale=1.0,maximun-scale=1.0,user-scaleable=no,width=device-width">
+	<meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="email=no" name="format-detection">
+	<meta name="description" content="一个借助百度天气API获取数据的简单天气查询web页面">
+	<meta name="keywords" content="百度天气,天气,weather,小米天气">
+	<title>weatherweb</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript" src="jquery-3.0.0.min.js"></script>
+	
+</head>
+<body>
+	<div id="contain">
+        <h1 class="none">天气预报</h1>
+		<header id="header">
+		    
+			<input type="text" id="city" placeholder="请输入城市名">
+			<button id ="search"></button>
+	
+			<hgroup>
+		        <h2 ><span class="now_temperature"></span>℃</h2>
+		        <h3 ><span class="address"></span>|<span class="now_weather"></span></h3>
+	        </hgroup>
+		<div class="weather_info">
+			<ul>
+				<li>风力
+				    <ul>
+				    <li class="wind"></li>
+				    </ul>
+				</li>
+				   
+				<li id ="line_border">PM2.5
+				    <ul>
+				    <li class="pm_num"></li>
+				    </ul>
+				</li>
+
+				<li>空气质量
+				    <ul>
+				    <li class="air_quality"></li>
+				    </ul>
+				</li>
+				 	
+			</ul>
+		</div>
+		</header>
+
+		<div id="content">
+		    <figure>
+				<img class="today_img" src="images/1_03.png">
+				<figcaption>
+				    <hgroup>
+					<h4>今天</h4>
+					<h5>
+						<span class="now_weather"></span>
+						|
+						<span class="wind"></span>
+					</h5>
+					</hgroup>
+					<p class="temperature1"></p>
+				</figcaption>
+			</figure>
+            <figure>
+				<img class="img2" src="images/1_03.png">
+				<figcaption>
+				    <hgroup>
+					<h4>明天</h4>
+					<h5>
+						<span class="weather2"></span>
+						|
+						<span class="wind2"></span>
+					</h5>
+					</hgroup>
+					<p class="temperature2"></p>
+				</figcaption>
+			</figure>
+			<figure>
+				<img class="img3" src="images/1_03.png">
+				<figcaption>
+				    <hgroup>
+					<h4>后天</h4>
+					<h5>
+						<span class="weather3"></span>
+						|
+						<span class="wind3"></span>
+					</h5>
+					</hgroup>
+					<p class="temperature3"></p>
+				</figcaption>
+			</figure>
+			<figure>
+				<img class="img4" src="images/1_03.png">
+				<figcaption>
+				    <hgroup>
+					<h4 class="lastday"></h4>
+					<h5>
+						<span class="weather4"></span>
+						|
+						<span class="wind4"></span>
+					</h5>
+					</hgroup>
+					<p class="temperature4"></p>
+				</figcaption>
+			</figure>
+		</div>
+		<div id="air_info">
+		 	<h2 class="title">空气质量</h2>
+		 	<div>
+               <p class="pm25data">125</p>
+		 		<canvas id="air_data" width="200px" height="125px">
+		 			
+		 		</canvas>   
+                 <p class="pm25two">PM25值</p>
+		 	</div> 
+
+		</div>
+        <div id="trip_advice">
+        	<h2 class="title">出行建议</h2>
+        	<div class="clother_box">
+        		<h3>穿衣：<span class="clother"></span></h3>
+        		<p class="clother_advice"></p>
+        	</div>
+        	<div class="spy_box">
+        		<h3>紫外线强度:<span class="spy"></span></h3>
+        		<p class="spy_advice"></p>
+        	</div>
+        </div>
+        <div id="trip_advice">
+        	<h2 class="title">运动建议</h2>
+        	<div class="sport_box">
+        		<h3>运动：<span class="sport"></span></h3>
+        		<p class="sport_advice"></p>
+        	</div>
+        	
+        </div>
+         <div id="trip_advice">
+        	<h2 class="title">洗车建议</h2>
+        	<div class="car_box">
+        		<h3>洗车：<span class="car"></span></h3>
+        		<p class="car_advice"></p>
+        	</div>
+        	
+        </div>
+		<footer id="footer">
+			<p><span>百度天气</span><span>小米手机天气</span></p>
+		</footer>
+	</div>
+	
+</body>
+<script type="text/javascript" src="index.js"></script>
+</html>

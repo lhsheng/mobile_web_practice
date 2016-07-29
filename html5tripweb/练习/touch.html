@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+	<title>touch</title>
+	<style type="text/css">
+    *{
+        margin: 0;
+        padding:0;
+    }
+     div{
+     	width:320px;
+     	height: 320px;
+     	opacity: 0.5;
+     	background-color: #666;
+     	margin: 0 auto;
+     	font-size: 30px;
+      position: relative;
+     }
+     span{
+        display: inline-block;
+        width: 4.2rem;
+        text-align: center;
+        background-color: #eee;
+        position: absolute;
+     }
+     #haha{
+      box-sizing: border-box;
+      background-color: green;
+     
+      position: relative;
+      
+     }
+     #haha:before,#haha:after{
+      position: absolute;
+      box-sizing: border-box;
+       width: 0;
+       height: 0;
+      content: "";
+       border: 2px solid transparent;
+
+     }
+     #haha::before {
+  top: 0;
+  left: 0;
+}
+#haha::after {
+  bottom: 0;
+  right: 0;
+}
+#haha:active {
+   color: red; 
+ 
+}
+#haha:hover::before, #haha:hover::after {
+  width: 100%;
+  height: 100%;
+ 
+}
+#haha:hover::before {
+  border-top-color:red;
+  border-left-color:red;
+  -webkit-transition: width 2s , height 2s ;
+          transition: width 2s , height 2s ;
+}
+#haha:hover::after {
+  border-bottom-color:red;
+  border-right-color:red;
+  -webkit-transition:  width 2s ease-out 2s, height 2s ease-out 2s;
+          transition:  width 2s ease-out 2s, height 2s ease-out 2s;
+} 
+
+
+#one{
+    width: 320px;
+    height: 320px;
+    border: 50%
+
+
+}
+	</style>
+	<script type="text/javascript">
+        document.addEventListener("DOMContentLoaded",function(){
+           document.documentElement.style.fontSize = document.documentElement.clientWidth / 6.4 + 'px';    
+        },false)
+
+
+
+		window.onload=function(){
+
+            /* var touchdiv=document.getElementById("touchdiv");
+              var span=document.getElementById("span");
+             touchdiv.addEventListener("touchstart",function(e){
+                    
+                    span.innerHTML=" 123:" + e.touches[0].clientX ;
+             },false)
+               touchdiv.addEventListener("touchend",function(e){
+                 console.log(e.target)
+                 console.log(e.targetTouches)
+             	  
+             },false)
+              document.addEventListener("touchmove",function(e){
+
+             	  span.style.top=e.touches[0].clientY+"px" ;
+                 
+
+             },false)
+
+*/
+		    var star=0,end=0;
+        (function(){
+        function handle(e){
+             var span=document.getElementsByTagName("span")[0];
+          
+             switch(e.type){
+               case "touchstart":
+                //  span.innerHTML= e.touches[0].clientX ;
+                  star=e.touches[0].clientX;
+                 // alert(star)
+                  break;
+
+             
+              case "touchmove":
+              e.preventDefault();
+              end=e.touches[0].clientX;
+             // span.innerHTML=" 123:" + e.touches[0].clientX ;
+              break;
+              case "touchend":
+                 alert(star-end);
+              console.log("end");
+              break;
+              case"click":
+              console.log("click");
+              break;
+
+
+         }
+     }
+        var touchdiv=document.getElementById("touchdiv");
+        touchdiv.addEventListener("touchstart",handle,false);
+        touchdiv.addEventListener("touchmove",handle,false);
+        touchdiv.addEventListener("touchend",handle,false);
+        touchdiv.addEventListener("click",handle,false);
+    
+})() 
+        }
+
+
+
+	</script>
+</head>
+<body>
+<div id="touchdiv">
+	<span id="span">wewqewqew</span>
+
+</div>
+	<div id="haha">asd</div>
+
+
+  <div id="one">asd</div>
+</body>
+</html>

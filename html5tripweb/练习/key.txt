@@ -1,0 +1,1 @@
+http://api.map.baidu.com/telematics/v3/weather?location=guangzhou&output=json&ak=IhxffeaPrl1QELlq5KTD3Fm9&&mcode=FF:35:77:A2:E0:A8:BA:52:78:CE:DC:E6:83:DA:17:69:4D:8F:69:CF;edu.hrbeu.WeatherDemo

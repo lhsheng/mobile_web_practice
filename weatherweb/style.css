@@ -1,0 +1,331 @@
+body,h1,h2,h3,h4,h5,h6,hr,p,blockquote,dl,
+dt,dd,ul,ol,li,pre,form,fieldset,legend,
+button,input,textarea,th,td,figure{
+	margin:0;
+	padding:0;
+}
+ul,ol{
+	list-style: none;
+}
+a{
+	text-decoration:none;
+}
+h1,h2,h3,h4,h5,h6{
+	font-weight: normal;
+}
+img{
+	display: block;
+	max-width: 100%;
+	border: none;
+}
+div, figure,figcaption,header ,footer{
+	box-sizing: border-box;
+}
+.none{
+	display: none;
+
+}
+body{
+	background-color: #efefef;
+}
+#contain{
+
+	width: 100%;
+    font-size:12px; 
+}
+
+#header{
+	width: 6.4rem;
+	height: 6rem;
+	color: #fff;
+	background-color:#80d8eb;
+	position: relative;
+	padding-top: .15rem;
+	margin: 0 auto;
+}
+#city{
+    padding-left: 0.3rem;
+    width: 90%;
+	height: 30px;
+	border-radius: 0.3rem;
+	border:none;
+	outline: none;
+	margin-left: 2.5%;
+	font-size: 16px;
+}
+
+#search{
+	width: 30px;
+	height: 30px;
+	position:absolute;
+	right: 2.5%;
+	border:none;
+	outline: none;
+	background-image: url("images/ic_search.png");
+	background-size: cover;
+	background-repeat: no-repeat;
+	border-bottom-right-radius: .1rem;
+	border-top-right-radius: .1rem
+
+}
+#header h2{
+	font-size: 50px;
+	font-weight: lighter;
+	text-align: left;
+	margin-left:0.3rem;
+
+}
+#header h3{
+	font-size: 16px;
+	margin-left:0.3rem;
+}
+
+#header h3 .address{
+	margin-right: 6px;
+}
+#header h3 .now_weather{
+	margin-left: 6px;
+}
+#header .weather_info{
+	position: absolute;
+	bottom: .2rem;
+	text-align: center;
+}
+#header .weather_info > ul {
+	display: -webkit-flex;
+    display: flex;
+	font-size:14px; 
+    justify-content:center;
+    width: 6.4rem;
+}
+#header .weather_info > ul li{
+	flex: 1;
+	-webkit-flex:1;
+}
+#header .weather_info li ul{
+	font-size: 18px;
+	margin-top: 6px;
+}
+
+ #line_border{
+	border-left: 1px solid #fff;
+	border-right: 1px solid #fff;
+}
+
+#content{
+	background-color: #fff;
+	width: 6.4rem;
+	margin:0 auto;
+	color: #000;
+}
+
+#content figure:after,#content figure:before{
+   content: "";
+   display: table;
+}
+
+#content figure:after{
+	clear: both;
+
+}
+#content figure figcaption{
+    float: left;
+    padding-top: .2rem;
+    position :relative;
+    width: 4.8rem
+}
+#content figure figcaption h5{
+	color: #3b3b3b;
+}
+#content figure img{
+	box-sizing: border-box;
+	float: left;
+	width: 1.2rem;
+	height: auto;
+	padding:0.2rem;
+	opacity: 0.8;
+
+}
+
+#content figure p{
+	position: absolute;
+	top: 0.25rem;
+	right:0;
+	font-size: 18px;
+	color: #3b3b3b;
+}
+
+#air_info{
+	max-width: 6.4rem;
+	margin: 0 auto;
+	background-color:#fff; 
+	margin-top: .1rem;
+	
+
+}
+.title{
+	font-size: 16px;
+	margin-left: .3rem;
+	height: .7rem;
+	line-height: .7rem;
+	text-align: left;
+	position: relative;
+}
+.title:after{
+	content: "";
+	position: absolute;
+	left: -0.3rem;
+
+	display: block;
+	height: 1px;
+	width: 6.4rem;
+	transform: scaleY(0.5);
+	background-color: #c2c2c2;
+}
+#air_info div{
+    max-width: 6.4rem;
+    height: 2.8rem;
+    position: relative;
+
+
+}
+#air_info  .pm25data{
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	text-align: center;
+	margin: auto;;
+	z-index: 12;
+	width: 80px;
+	height: 30px;
+	font-size: 30px;
+	line-height: 30px;
+
+
+
+}
+#air_info .pm25two{
+	position: absolute;
+	bottom: 20px;
+    text-align: center;
+    left: 45%;
+    z-index: 12;
+}
+
+#air_data{
+	background-color: #fff;
+	position:absolute;
+	top:0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto; 
+    z-index: 1
+
+}
+
+#trip_advice{
+   	max-width: 6.4rem;
+	margin: 0 auto;
+	background-color:#fff; 
+	margin-top: .1rem;
+}
+#trip_advice div{
+	height: 1.7rem;
+	background-repeat: no-repeat;
+	padding: 0.2rem 0.3rem 0.1rem 1.5rem;
+	background-size: 1rem 1rem;
+	background-position: .3rem center;
+	color: #3b3b3b;
+    position:relative;
+}
+#trip_advice div:after{
+	content: "";
+	position: absolute;
+	display: block;
+	bottom: 0;
+	left: 0;
+	height: 1px;
+	width: 6.4rem;
+	transform: scaleY(0.5);
+	background-color: #c2c2c2;
+}
+#trip_advice .clother_box{
+	background-image: url("images/clother_03.png");
+}
+#trip_advice .spy_box{
+	background-image: url("images/spy_03.png");
+}
+#trip_advice div h3{
+    color: #000;
+    margin-bottom: 0.08rem;
+    font-size: 16px;
+}
+#trip_advice div p{
+	font-size: 12px;
+	color: #3b3b3b;
+}
+#trip_advice .sport_box{
+	background-image: url("images/sport_03.png");
+}
+#trip_advice .car_box{
+	background-image: url("images/car_03.png");
+}
+#footer{
+	max-width: 6.4rem;
+	margin: .1rem auto 0;
+	height: .6rem;
+	background-color: #fff;
+    text-align: center;
+}
+#footer p{
+	height: .7rem;
+	line-height: .6rem;
+	text-align: center;
+	font-size: 18px;
+	color: #3b3b3b;
+}
+#footer p span:first-child{
+    margin-right: 0.3rem;
+}
+
+@media screen and (max-width:320px){
+    #footer p{
+    	font-size: 12px;
+    }
+
+}
+@media screen and (min-width:320px) and (max-width:400px){
+     #footer p{
+    	font-size: 16px;
+    }
+  
+
+}
+@media screen and (min-width:400px){
+	
+     #footer p,#header h3,.title{
+    	font-size: 20px;
+    }
+    #trip_advice div p{
+    	font-size: 20px;
+    }
+    #trip_advice div h3{
+    	font-size: 20px;
+    }
+    #content figure figcaption h5, #content figure figcaption h4,#header .weather_info li ul{
+    	font-size: 20px;
+    }
+    #content figure p{
+        font-size: 24px;
+    }
+    #header .weather_info > ul{
+    	font-size: 18px;
+    }
+    #trip_advice div{
+    	height:2.2rem;
+
+    }
+}

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	
+	<title>weather</title>
+  <style type="text/css">
+   #weather{
+    width: 200px;height: 200px;background-color: #333;
+   }
+
+   
+  </style>
+  <script type="text/javascript" src="jquery-3.0.0.min.js"></script>
+     
+
+
+</head>
+<body>
+
+
+<div id="weather">
+<p id ="news">
+	
+
+
+</p>
+</div>
+<div><img src=""></div>
+</body>
+<script type="text/javascript">
+
+      /*var xhr;
+      if (window.XMLHttpRequest) {
+        xhr=new XMLHttpRequest();
+      }
+     else{
+      xhr=new ActiveXObject("Microsoft.XMLHTTP")
+     }
+     xhr.onreadystatechange=function(){
+
+        if (xhr.readyState==4&&xhr.status==200) {
+         alert("asd")
+        //  document.getElementById("news").innerHTML=xhr.responseText;
+        }
+
+
+     }
+    xhr.open("GET","http://api.map.baidu.com/telematics/v3/weather?location=guangzhou&output=json&ak=IhxffeaPrl1QELlq5KTD3Fm9&&mcode=FF:35:77:A2:E0:A8:BA:52:78:CE:DC:E6:83:DA:17:69:4D:8F:69:CF;edu.hrbeu.WeatherDemo",true);
+     xhr.send();*/
+
+
+   /*  var script=document.createElement("script");
+       script.src="http://api.map.baidu.com/telematics/v3/weather?location=guangzhou&output=json&ak=IhxffeaPrl1QELlq5KTD3Fm9&&mcode=FF:35:77:A2:E0:A8:BA:52:78:CE:DC:E6:83:DA:17:69:4D:8F:69:CF;edu.hrbeu.WeatherDemo";
+       document.getElementsByTagName('head')[0].appendChild(script);
+*/
+var a="广州";
+
+$("#weather").click(function(){
+    
+   b();
+
+})
+  var b=function(){
+    $.ajax({
+        url: 'http://api.map.baidu.com/telematics/v3/weather?location='+a+'&output=json&ak=IhxffeaPrl1QELlq5KTD3Fm9&&mcode=FF:35:77:A2:E0:A8:BA:52:78:CE:DC:E6:83:DA:17:69:4D:8F:69:CF;edu.hrbeu.WeatherDemo',
+        dataType: "jsonp",
+        jsonp: "callback",
+        success: function (data) {
+         asd(data);
+        }
+    })
+}
+
+function asd(data){
+$("#news").html(data.date);
+           $("img").prop("src",data.results[0].weather_data[0].dayPictureUrl);
+           var s=/(\d{2})/;
+           console.log(s.exec(data.results[0].weather_data[0].date))
+}
+</script> 
+</html>

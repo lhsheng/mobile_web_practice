@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+ <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+  <meta content="yes" name="apple-mobile-web-app-capable">
+  <meta content="black" name="apple-mobile-web-app-status-bar-style">
+  <meta content="telephone=no" name="format-detection">
+  <meta content="email=no" name="format-detection">
+	<title>html5移动端web</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+   <link rel="stylesheet" href="swiper/swiper-3.3.1.min.css">
+
+</head>
+<body>
+   <header id="header">
+   	<nav class="link">
+   		<h2 class="none"><网站导航</h2>
+   		<ul>
+   			<li class="active "><a href="index.html">首页</a></li>
+   			<li><a href="information.html">咨询</a></li>
+   			<li><a href="airport.html">机票</a></li>
+   			<li><a href="about.html">关于</a></li>
+          
+   		</ul>
+   	</nav>
+   </header>
+<!--   轮播 -->
+    
+    <div class="swiper-container">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="img/images/1.png"></div>
+        <div class="swiper-slide"><img src="img/images/2.png"></div>
+        <div class="swiper-slide"><img src="img/images/3_01.png"></div>
+    </div>
+    <div class="swiper-pagination"></div>
+ 
+</div>
+   <div id="search">
+   	 
+   	   <input type="text" class="search" placeholder="请输入旅游景点城市">
+   	   <button class="button"> 搜索</button>
+
+   </div>
+
+   <div id="tour">
+  <hgroup>
+  	<h2>热门旅游</h2>
+    <h3>最新的各种热门旅游资讯的推荐</h3>
+  </hgroup>
+     <div class="container">
+     	<figure>
+     		<img src="img/images/5_02.png" >
+     		<figcaption>
+     			<h4>广州-深圳5天游</h4>
+     			<p>包团特惠，景点丰富</p>
+     			<div class="info">
+     			<em class="sat">满意度80%</em>
+     			<span class="price">￥<strong>500</strong>起</span>
+     			</div>
+
+
+     		</figcaption>
+
+     	</figure>
+     	<figure>
+     		<img src="img/images/5_02.png" >
+     		<figcaption>
+	     		    <h4>广州-深圳5天游</h4>
+	     			<p>包团特惠，景点丰富</p>
+	     			<div class="info">
+	     			<em class="sat">满意度80%</em>
+	     			<span class="price">￥<strong>500</strong>起</span>
+	     			</div>
+</figcaption>
+
+     	</figure>
+     	<figure>
+     		<img src="img/images/5.png" >
+     		<figcaption>
+     		 <h4>广州-深圳5天游</h4>
+	     			<p>包团特惠，景点丰富</p>
+	     			<div class="info">
+	     			<em class="sat">满意度80%</em>
+	     			<span class="price">￥<strong>500</strong>起</span>
+	     			</div>
+	     	</figcaption>
+
+     	</figure>
+     	<figure>
+     		<img src="img/images/5.png" >
+     		<figcaption>
+                    <h4>广州-深圳5天游</h4>
+	     			<p>包团特惠，景点丰富
+                          包团特惠，景点丰富
+                          包团特惠
+	     			</p>
+	     			<div class="info">
+	     			<em class="sat">满意度80%</em>
+	     			<span class="price">￥<strong>500</strong>起</span>
+	     			</div>
+     		</figcaption>
+
+     	</figure>
+
+       <figure>
+        <img src="img/images/5.png" >
+        <figcaption>
+                    <h4>广州-深圳5天游</h4>
+            <p>包团特惠，景点丰富
+                          包团特惠，景点丰富
+                          包团特惠
+            </p>
+            <div class="info">
+            <em class="sat">满意度80%</em>
+            <span class="price">￥<strong>500</strong>起</span>
+            </div>
+        </figcaption>
+
+      </figure>
+      <figure>
+        <img src="img/images/5_02.png" >
+        <figcaption>
+                    <h4>广州-深圳5天游</h4>
+            <p>包团特惠，景点丰富
+                          包团特惠，景点丰富
+                          包团特惠
+            </p>
+            <div class="info">
+            <em class="sat">满意度80%</em>
+            <span class="price">￥<strong>500</strong>起</span>
+            </div>
+        </figcaption>
+
+      </figure>
+     </div>
+
+   </div>
+
+   <footer id="footer">
+          <div class="top">
+          	客户端 | 触屏版 |电脑版
+          </div>
+          <div class="bottom">
+          	
+               copyright @ lsheng 移动web |粤ICP备12121212号
+
+          </div>
+   	
+
+   </footer>
+	<script type="text/javascript" src="swiper/swiper.min.js"></script>
+    <script type="text/javascript">
+    
+    window.onload=function(){
+      
+      document.documentElement.style.fontSize = document.documentElement.clientWidth / 6.4 + 'px';
+        var mySwiper = new Swiper ('.swiper-container', {
+        direction: 'horizontal',
+        loop: true,
+        autoplay: 5000,
+        prevButton:'.swiper-button-prev',
+        nextButton:'.swiper-button-next',
+        pagination : '.swiper-pagination',
+observer:true,     
+    })}
+  </script>
+</body>
+</html>
