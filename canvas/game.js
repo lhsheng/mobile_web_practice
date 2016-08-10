@@ -21,7 +21,9 @@ var game={
 			ctx=this.canvas.getContext("2d");
 			this.width=this.canvas.width;
 			this.height=this.canvas.height;
-			this.init();
+			screen.welcome();
+			this.canvas.addEventListener("click",this.rungame,false);
+			//this.init();
 			Ctrl.init();
 		}
 	},
@@ -29,13 +31,19 @@ var game={
         game.play=requestAnimFrame(game.animate);
         game.draw();
 	},
+	rungame:function(){
+		game.canvas.removeEventListener("click",game.rungame,false);
+		game.init();
+		game.animate();
+
+	},
 	init:function(){
 		Background.init();
 		hub.init();
 		ball.init();
 		paddle.init();
 		Bricks.init();
-		this.animate();
+		//this.animate();
 		
 		
 	},
@@ -49,8 +57,37 @@ var game={
     	
 
 
+    },
+    restartgame:function(){
+    	game.canvas.removeEventListener("click",game.restartgame,false);
+    	game.init();
     }
 };
+
+var screen={
+	welcome:function(){
+		this.text="canvas game";
+		this.textsub="click to start";
+		this.textcolor="#333";
+		this.creat();
+	},
+	creat:function(){
+		ctx.fillStyle="#333";
+		ctx.fillRect(0,0,game.width,game.height);
+		ctx.fillStyle="#fff";
+		ctx.textAlign="center";
+		ctx.font="40px arial";
+		ctx.fillText(this.text,game.width/2,game.height/2);
+		ctx.font="20px arial";
+		ctx.fillText(this.textsub,game.width/2,game.height/2+30);
+
+	},
+	gameover:function(){
+		this.text="game over";
+		this.textsub="click to restart";
+		this.creat();
+	}
+}
 var hub={
     init:function(){
 		this.lv=1;
@@ -58,11 +95,11 @@ var hub={
 	},
 	draw:function(){
 		ctx.font='12px Arial';
-		ctx.fillStyle='white';
+		ctx.fillStyle='#000';
 		//ctx.textAlign='left';
-		ctx.fillText('score:'+ this.score,5,game.height-5);
+		ctx.fillText('score:'+ this.score,20,game.height-5);
         //ctx.textAlign='right';
-       ctx.fillText('lv:'+this.lv,game.width-5,game.height-5);
+       ctx.fillText('lv:'+this.lv,game.width-20,game.height-5);
 	}
 };
 var Background={
@@ -118,6 +155,8 @@ var Bricks={
 
 	},
 	collide:function(i,j){
+		     hub.score+=1;
+		     this.total+=1;
              this.count[i][j]=false;
              ball.sy=-ball.sy;
 	},
