@@ -12,8 +12,6 @@ window.requestAnimFrame=(function(){
 	};
 })();
 
-
-
 var game={
 	canvas:document.getElementById("canvas"),
 	setup:function(){
@@ -80,7 +78,6 @@ var screen={
 		ctx.fillText(this.text,game.width/2,game.height/2);
 		ctx.font="20px arial";
 		ctx.fillText(this.textsub,game.width/2,game.height/2+30);
-
 	},
 	gameover:function(){
 		this.text="game over";
