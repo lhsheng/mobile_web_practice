@@ -92,8 +92,6 @@ function getdata(data){
          clother_advice.html(data.results[0].index[0].des);
          car.html(data.results[0].index[1].zs);
          car_advice.html(data.results[0].index[1].des);
-         spy.html(data.results[0].index[5].zs);
-         spy_advice.html(data.results[0].index[5].des);
          sport.html(data.results[0].index[4].zs);
          sport_advice.html(data.results[0].index[4].des);
          now_temperature.html(nowtemp( data.results[0].weather_data[0].date))
